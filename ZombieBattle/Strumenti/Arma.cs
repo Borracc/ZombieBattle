@@ -53,26 +53,26 @@ namespace ZombieBattle.Strumenti
         }//costruttore di copia
 
         public String ToString()
+        {
+            String s = ((Strumento) this).toString() + " " + GitMin + "-" + GitMax + "/" + Dadi + "/" + Danni + "/";
+            if (Rumore)
             {
-                String s = ((Strumento) this).toString() + " " + GitMin + "-" + GitMax + "/" + Dadi + "/" + Danni + "/";
-                if (Rumore)
-                {
-                    s += "♫/";
-                }
-                else
-                {
-                    s += "▬/";
-                }//if-eslse
-                if (Porte)
-                {
-                    s += "⌂";
-                }
-                else
-                {
-                    s += "▬";
-                }//if-eslse
-                return s;
-            }//toString
+                s += "♫/";
+            }
+            else
+            {
+                s += "▬/";
+            }//if-eslse
+            if (Porte)
+            {
+                s += "⌂";
+            }
+            else
+            {
+                s += "▬";
+            }//if-eslse
+            return s;
+        }//toString
 
     }//Arma
 }
